@@ -1,4 +1,4 @@
-# LangGraph vs SEDA（dh-agent-core）终极对比
+# LangGraph vs SEDA 终极对比
 
 > 本文是 LangGraph 学习课程第 16 讲（收官总结），把前 15 讲的所有对照点收拢成
 > 一张"什么场景该选哪个"的决策参考。不含新代码，是给这套知识盖个章。
@@ -11,7 +11,7 @@
 
 ## 一、核心范式差异
 
-| 维度 | LangGraph | SEDA (dh-agent-core) |
+| 维度 | LangGraph | SEDA |
 |------|-----------|----------------------|
 | 并发模型 | Pregel/BSP：超步(superstep) + barrier 栅栏同步 | Staged Event-Driven：goroutine + channel 事件驱动 |
 | 节点形态 | 一个函数 `node(state)->dict`（轻） | `Operator` struct + `DoImpl()`（重，带生命周期） |
