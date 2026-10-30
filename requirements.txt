@@ -1,0 +1,8 @@
+# LangGraph 学习依赖
+# 第一个最简图只需要 langgraph 本身（不调用大模型，无需 API Key）
+langgraph>=0.2.0
+
+# 第 8 讲起：节点里调用大模型（DeepSeek 兼容 OpenAI 接口，用 langchain-openai）
+langchain>=1.0
+langchain-openai>=0.2.0
+python-dotenv>=1.0.0

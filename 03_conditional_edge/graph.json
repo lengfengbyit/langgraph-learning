@@ -1,0 +1,23 @@
+{
+  "state": "State",
+  "nodes": [
+    { "name": "classify", "fn": "classify" },
+    { "name": "chitchat", "fn": "chitchat" },
+    { "name": "search", "fn": "search" }
+  ],
+  "edges": [
+    ["START", "classify"],
+    ["chitchat", "END"],
+    ["search", "END"]
+  ],
+  "conditional_edges": [
+    {
+      "from": "classify",
+      "router": "route",
+      "path_map": {
+        "chitchat": "chitchat",
+        "search": "search"
+      }
+    }
+  ]
+}
